@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Home page</title>
+    {% endblock %}
+</head>
+<body style="background-color:pink">
+{% block logo %}
+<h4 style="color:red; margin:15px;padding-top:5px"><i>3RITechnologies</i></h4>
+{% endblock %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link pl-5" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'about' %}">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'course' %}">Courses Offerd</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'signup' %}">SignUp</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'signin' %}">SignIn</a>
+      </li>
+      {% if request.user.is_authenticated %}
+        <li class="nav-item">
+        <a class="nav-link pl-5" href="{% url 'feedback' %}">Feedback</a>
+      </li>
+
+    </ul>
+    {% endif %}
+  </div>
+</nav>
+{% endblock %}
+{% block main_content %}
+<div id="banner" style="height:260px;width:100%;border:1px solid black;padding-top:10px">
+  <img src="{% static 'images/project4.jpeg' %}" style="height:250px;width:20%">
+  <img src="{% static 'images/p1.jpeg' %}" style="height:250px;width:19%">
+  <img src="{% static 'images/project9.jpeg' %}" style="height:250px;width:19%">
+  <img src="{% static 'images/p4.jpeg' %}" style="height:250px;width:19%">
+  <img src="{% static 'images/project8.jpeg' %}" style="height:250px;width:21%">
+</div>
+<div style="height:200px; width:100%; display:inline-block; padding-left:10px; padding-top:5px";>
+  <div style="height:200px; width:410px; background-color:white; display:inline-block">
+    <h3>Industry Expert Trainers</h3>
+    <p>Highly Qualified and Industry Experience Professionals for providing Real-time scenario based training</p>
+  </div>
+  <div style="height:200px; width:420px; background-color:white; display:inline-block;">
+    <h3>Flexible batches</h3>
+    <p>Multiple batches and support systems to make sure you can learn acccording to your convinience.</p>
+  </div>
+  <div style="height:200px; width:410px; background-color:white; display:inline-block">
+    <h3>100% Placement Assistance</h3>
+    <p>After training completion,we provide job assistance,scheduled interview for every individual.</p>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+
+<div id="banner1" style="height:180px;width:100%;padding-top:10px;padding-left:200px">
+  <h3 style="margin:10px;padding-left:320px">Our Clients</h3>
+<img src="{% static 'images/c3.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+<img src="{% static 'images/c2.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+<img src="{% static 'images/c1.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+<img src="{% static 'images/c8.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+<img src="{% static 'images/c6.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+  <img src="{% static 'images/p9.png' %}" style="height:90px;width:140px;margin:2px;padding:5px">
+{% endblock %}
+</body>
+</html>

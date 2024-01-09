@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block Title %}
+    <title>signin page</title>
+    {% endblock %}
+
+{% block main_content %}
+<div style="height:450px;width:450px;margin-left:400px;margin-top:20px;margin-bottom:20px;padding-top:100px;border:1px solid black;background-color:#198d8d">
+<form method="POST"  novalidate>
+       <center>
+        <table >
+            <h3>Sign In</h3>
+ {% csrf_token %}
+ {% for fm in form  %}
+            <tr>
+                <td>{{fm.label_tag}}</td>
+                <td>{{fm}}</td>
+                <td>{{fm.errors}}</td><br>
+</tr>
+ {% endfor %}
+             </table>
+       </center>
+        <br><br>
+ <input type="submit" value="Sign in" style="margin-left:200px;color:white;background-color:green">
+
+</form>
+</div>
+{% endblock %}

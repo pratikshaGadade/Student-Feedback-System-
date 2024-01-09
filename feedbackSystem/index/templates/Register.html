@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block title %}
+    <title>Register</title>
+    {% endblock %}
+
+{% block main_content %}
+<div style="height:500px;width:450px;margin-left:400px;margin-top:20px;margin-bottom:20px;padding-top:20px;border:1px solid black;background-color:#198d8d">
+<form method="POST"  novalidate style="margin-top:30px">
+  <center>
+    <table style="margin-top:-150px;">
+      <h3>Sign Up</h3><br>
+      <h5>Please fill in this form to create account</h5><br>
+      {% csrf_token %}
+      {% for fm in form  %}
+        <tr>
+          <td>{{fm.label_tag}}</td>
+          <td>{{fm}}</td>
+          <td>{{fm.errors}}</td><br>
+        </tr> {% endfor %}
+    </table>
+  </center><br><br>
+  <input type="submit" value="Register" style="color:white;margin-left:200px;background-color:green">
+</form>
+</div>
+{% endblock %}

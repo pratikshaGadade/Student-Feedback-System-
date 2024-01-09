@@ -1,0 +1,66 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+    <title>course</title>
+    {% endblock %}
+
+{% block main_content %}
+<h2 style="padding:20px">Courses Offered By Us </h2>
+<div class="main" style="display: flex; flex-wrap: wrap;">
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/py.jpeg' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">Python</h5>
+<p class="card-text">Python is a dynamic, interpreted (bytecode-compiled) language.This Python basics free course covers basic and advanced concepts in Python. </p>
+<a href="python.html" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/javal.png' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">Java</h5>
+<p class="card-text">Java diploma course is of average 6 months. It can be of 3 to 12 months. One needs to have a basic understanding of computers and programming.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/datasci.jpeg' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">Data Science</h5>
+<p class="card-text">Data science is the domain of study that deals with vast volumes of data using modern tools and techniques to find unseen patterns, derive meaningful information, and make business decisions. </p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/aws.png' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">AWS</h5>
+<p class="card-text">AWS certification is a level of Amazon Web Services cloud expertise that an IT professional obtains after passing one or more exams the public cloud provider offers.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/devops.jpeg' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">Devops</h5>
+<p class="card-text">The DevOps course curriculum embraces the growth objectives of IT professionals, making them proficient at tackling the architecture and scalability of software deployment.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+<img src="{% static 'images/ai.jpeg' %}" class="card-img-top" alt="..." style="height:250px">
+<div class="card-body">
+<h5 class="card-title">Artificial Intelligence</h5>
+<p class="card-text">Artificial intelligence is a theoretical form of AI where a machine would have an intelligence equaled to humans; it would have a self-aware consciousness that has the ability to solve problems, learn, and plan for the future.
+</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+</div>
+
+{% endblock %}
